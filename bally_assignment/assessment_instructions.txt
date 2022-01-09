@@ -1,0 +1,52 @@
+Write a script to parse the attached projections file, and for each event in the file do the following:
+	1) Organize the data according to the heirarchy diagram below
+	2) Score each player with the given scoring system and assign them a "FantasyPoints" projection with the value. Change the display name for the stats to a formatted version of the represented stat
+	3) Sort the players in each team by FantasyPoints descending
+
+Output should be saved as a JSON file hierarchically organized as follows:
+
+Events
+	<Event Details>
+	Teams:
+		<Team Details>
+			Players:
+				<Player Details>
+				Projections:
+					<Player Projections>
+				<Player Details>
+				Projections:
+					<Player Projections>
+				...
+		<Team Details>
+			Players:
+				<Player Details>
+				Projections:
+					<Player Projections>
+				<Player Details>
+				Projections:
+					<Player Projections>
+				...
+	...
+			
+		
+Stat Translation Dictionary
+pas_att : PassingAttempts
+pas_cmp : PassingCompletions
+pas_tds : PassingTouchdowns
+pas_yds : PassingYards
+rus_att : RushingAttempts
+rus_tds : RushingTouchdowns
+rus_yds : RushingYards
+rec_rec : Receptions
+rec_tds : ReceivingTouchdowns
+rec_yds : ReceivingYards
+	
+
+Scoring Guidelines
+Passing Yards: +0.04
+Passing Touchdowns: +4.00
+Rushing Yards: +0.10
+Rushing Touchdowns: +6.00
+Receptions: +1.00
+Receiving Yards: +0.10
+Receiving Touchdowns: +6.00
